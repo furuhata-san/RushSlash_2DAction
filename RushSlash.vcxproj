@@ -18,6 +18,50 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\base\Effects.h" />
+    <ClInclude Include="code\base\HitObjectBase.h" />
+    <ClInclude Include="code\base\Object.h" />
+    <ClInclude Include="code\enemy\EnemyBase.h" />
+    <ClInclude Include="code\enemy\Enemys.h" />
+    <ClInclude Include="code\map\Map.h" />
+    <ClInclude Include="code\object\Camera.h" />
+    <ClInclude Include="code\object\GoalItem.h" />
+    <ClInclude Include="code\player\AttackArea.h" />
+    <ClInclude Include="code\player\FireAttackArea.h" />
+    <ClInclude Include="code\player\Player.h" />
+    <ClInclude Include="code\player\SwordAttackArea.h" />
+    <ClInclude Include="code\scene\AddList.h" />
+    <ClInclude Include="code\scene\GameMgr.h" />
+    <ClInclude Include="code\scene\SceneMgr.h" />
+    <ClInclude Include="code\tool\DataLoader.h" />
+    <ClInclude Include="code\tool\KeyChecker.h" />
+    <ClInclude Include="code\tool\ViewData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\base\Effects.cpp" />
+    <ClCompile Include="code\base\HitObjectBase.cpp" />
+    <ClCompile Include="code\base\Object.cpp" />
+    <ClCompile Include="code\enemy\BlackEnemy.cpp" />
+    <ClCompile Include="code\enemy\BlueEnemy.cpp" />
+    <ClCompile Include="code\enemy\EnemyBase.cpp" />
+    <ClCompile Include="code\enemy\GreenEnemy.cpp" />
+    <ClCompile Include="code\enemy\PurpleEnemy.cpp" />
+    <ClCompile Include="code\enemy\RedEnemy.cpp" />
+    <ClCompile Include="code\map\Map.cpp" />
+    <ClCompile Include="code\object\Camera.cpp" />
+    <ClCompile Include="code\object\GoalItem.cpp" />
+    <ClCompile Include="code\player\FireAttackArea.cpp" />
+    <ClCompile Include="code\player\Player.cpp" />
+    <ClCompile Include="code\player\SwordAttackArea.cpp" />
+    <ClCompile Include="code\scene\Game.cpp" />
+    <ClCompile Include="code\scene\SceneMgr.cpp" />
+    <ClCompile Include="code\scene\Title.cpp" />
+    <ClCompile Include="code\source\ProjectSource.cpp" />
+    <ClCompile Include="code\tool\DataLoader.cpp" />
+    <ClCompile Include="code\tool\KeyChecker.cpp" />
+    <ClCompile Include="code\tool\ViewData.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,50 +182,6 @@
       <AdditionalLibraryDirectories>./Dxlib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="BlackEnemy.cpp" />
-    <ClCompile Include="BlueEnemy.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Effects.cpp" />
-    <ClCompile Include="EnemyBase.cpp" />
-    <ClCompile Include="FireAttackArea.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GoalItem.cpp" />
-    <ClCompile Include="GreenEnemy.cpp" />
-    <ClCompile Include="KeyChecker.cpp" />
-    <ClCompile Include="HitObjectBase.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="ProjectSource.cpp" />
-    <ClCompile Include="PurpleEnemy.cpp" />
-    <ClCompile Include="RedEnemy.cpp" />
-    <ClCompile Include="SceneMgr.cpp" />
-    <ClCompile Include="SwordAttackArea.cpp" />
-    <ClCompile Include="Title.cpp" />
-    <ClCompile Include="ViewData.cpp" />
-    <ClCompile Include="DataLoader.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AddList.h" />
-    <ClInclude Include="AttackArea.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Effects.h" />
-    <ClInclude Include="EnemyBase.h" />
-    <ClInclude Include="Enemys.h" />
-    <ClInclude Include="FireAttackArea.h" />
-    <ClInclude Include="GameMgr.h" />
-    <ClInclude Include="GoalItem.h" />
-    <ClInclude Include="KeyChecker.h" />
-    <ClInclude Include="HitObjectBase.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="SceneMgr.h" />
-    <ClInclude Include="SwordAttackArea.h" />
-    <ClInclude Include="ViewData.h" />
-    <ClInclude Include="DataLoader.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
