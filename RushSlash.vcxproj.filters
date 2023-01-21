@@ -4,159 +4,150 @@
     <Filter Include="MySource">
       <UniqueIdentifier>{797d789f-a18f-484e-902a-c72244070aa0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\AdditionalFeatures">
-      <UniqueIdentifier>{6e52e227-531d-4c7d-b701-54c0e5102ac1}</UniqueIdentifier>
+    <Filter Include="MySource\Player">
+      <UniqueIdentifier>{a13ae73f-dd76-416b-a7de-be2478f45dd3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\Scenes">
-      <UniqueIdentifier>{a86cd784-66b9-4292-a8ce-2373fa336841}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MySource\Scenes\SceneMgr">
-      <UniqueIdentifier>{fca88a2b-a295-4db8-874c-957df8057496}</UniqueIdentifier>
+    <Filter Include="MySource\Base">
+      <UniqueIdentifier>{e23eafc4-a9ba-4e1f-9f0e-7d9865af2a11}</UniqueIdentifier>
     </Filter>
     <Filter Include="MySource\Map">
-      <UniqueIdentifier>{ca155c52-4962-42eb-9468-ab225f0880d1}</UniqueIdentifier>
+      <UniqueIdentifier>{0ca471c8-c18b-4eaa-a140-23b7fc936445}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\CreateObjects">
-      <UniqueIdentifier>{297914cf-527d-4b32-906b-5cafbb9319f0}</UniqueIdentifier>
+    <Filter Include="MySource\Enemy">
+      <UniqueIdentifier>{284b3cd8-f792-47d6-84ea-4f463dded4a9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\CreateObjects\Object">
-      <UniqueIdentifier>{5d7eaf5c-9263-4984-add1-7cf76ee8fecf}</UniqueIdentifier>
+    <Filter Include="MySource\Object">
+      <UniqueIdentifier>{39da4320-8485-449d-b460-083b23c50835}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\CreateObjects\HitObject">
-      <UniqueIdentifier>{ef12930d-f827-4aaa-98d4-7ea70a743597}</UniqueIdentifier>
+    <Filter Include="MySource\Scene">
+      <UniqueIdentifier>{d5419628-ed96-4dea-9003-3871c51e8f27}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\CreateObjects\HitObject\Player">
-      <UniqueIdentifier>{a18a0d9e-2174-4bd3-b2fc-34795b4334e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MySource\CreateObjects\HitObject\Goods">
-      <UniqueIdentifier>{bd7efea7-93f8-47b6-ae31-a3277b77e9d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MySource\CreateObjects\HitObject\Enemys">
-      <UniqueIdentifier>{25b91342-b270-4a9a-a7f4-b37aa783ea95}</UniqueIdentifier>
+    <Filter Include="MySource\Tool">
+      <UniqueIdentifier>{bbb5fe49-28b2-4047-a9af-773679cca32b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="KeyChecker.cpp">
-      <Filter>MySource\AdditionalFeatures</Filter>
+    <ClInclude Include="code\player\AttackArea.h">
+      <Filter>MySource\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="code\player\FireAttackArea.h">
+      <Filter>MySource\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="code\player\Player.h">
+      <Filter>MySource\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="code\player\SwordAttackArea.h">
+      <Filter>MySource\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="code\base\Effects.h">
+      <Filter>MySource\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="code\base\HitObjectBase.h">
+      <Filter>MySource\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="code\base\Object.h">
+      <Filter>MySource\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="code\map\Map.h">
+      <Filter>MySource\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="code\enemy\EnemyBase.h">
+      <Filter>MySource\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="code\enemy\Enemys.h">
+      <Filter>MySource\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="code\object\Camera.h">
+      <Filter>MySource\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="code\object\GoalItem.h">
+      <Filter>MySource\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="code\scene\AddList.h">
+      <Filter>MySource\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="code\scene\GameMgr.h">
+      <Filter>MySource\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="code\scene\SceneMgr.h">
+      <Filter>MySource\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="code\tool\DataLoader.h">
+      <Filter>MySource\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="code\tool\KeyChecker.h">
+      <Filter>MySource\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="code\tool\ViewData.h">
+      <Filter>MySource\Tool</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\player\FireAttackArea.cpp">
+      <Filter>MySource\Player</Filter>
     </ClCompile>
-    <ClCompile Include="ViewData.cpp">
-      <Filter>MySource\AdditionalFeatures</Filter>
+    <ClCompile Include="code\player\Player.cpp">
+      <Filter>MySource\Player</Filter>
     </ClCompile>
-    <ClCompile Include="ProjectSource.cpp">
+    <ClCompile Include="code\player\SwordAttackArea.cpp">
+      <Filter>MySource\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="code\base\Effects.cpp">
+      <Filter>MySource\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="code\base\HitObjectBase.cpp">
+      <Filter>MySource\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="code\base\Object.cpp">
+      <Filter>MySource\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="code\map\Map.cpp">
+      <Filter>MySource\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\BlackEnemy.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\BlueEnemy.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\EnemyBase.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\GreenEnemy.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\PurpleEnemy.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\enemy\RedEnemy.cpp">
+      <Filter>MySource\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="code\object\Camera.cpp">
+      <Filter>MySource\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="code\object\GoalItem.cpp">
+      <Filter>MySource\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="code\scene\Game.cpp">
+      <Filter>MySource\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="code\scene\SceneMgr.cpp">
+      <Filter>MySource\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="code\scene\Title.cpp">
+      <Filter>MySource\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="code\tool\DataLoader.cpp">
+      <Filter>MySource\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="code\tool\KeyChecker.cpp">
+      <Filter>MySource\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="code\tool\ViewData.cpp">
+      <Filter>MySource\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="code\source\ProjectSource.cpp">
       <Filter>MySource</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMgr.cpp">
-      <Filter>MySource\Scenes\SceneMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="DataLoader.cpp">
-      <Filter>MySource\AdditionalFeatures</Filter>
-    </ClCompile>
-    <ClCompile Include="RedEnemy.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyBase.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="SwordAttackArea.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>MySource\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackEnemy.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="BlueEnemy.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="GreenEnemy.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="PurpleEnemy.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClCompile>
-    <ClCompile Include="FireAttackArea.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>MySource\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Title.cpp">
-      <Filter>MySource\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="GoalItem.cpp">
-      <Filter>MySource\CreateObjects\HitObject\Goods</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>MySource\CreateObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Effects.cpp">
-      <Filter>MySource\CreateObjects\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>MySource\CreateObjects\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="HitObjectBase.cpp">
-      <Filter>MySource\Map</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="KeyChecker.h">
-      <Filter>MySource\AdditionalFeatures</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewData.h">
-      <Filter>MySource\AdditionalFeatures</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMgr.h">
-      <Filter>MySource\Scenes\SceneMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="HitObjectBase.h">
-      <Filter>MySource\CreateObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>MySource\CreateObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="DataLoader.h">
-      <Filter>MySource\AdditionalFeatures</Filter>
-    </ClInclude>
-    <ClInclude Include="AttackArea.h">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyBase.h">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClInclude>
-    <ClInclude Include="SwordAttackArea.h">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>MySource\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="FireAttackArea.h">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>MySource\CreateObjects\HitObject\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemys.h">
-      <Filter>MySource\CreateObjects\HitObject\Enemys</Filter>
-    </ClInclude>
-    <ClInclude Include="GoalItem.h">
-      <Filter>MySource\CreateObjects\HitObject\Goods</Filter>
-    </ClInclude>
-    <ClInclude Include="AddList.h">
-      <Filter>MySource\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Effects.h">
-      <Filter>MySource\CreateObjects\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMgr.h">
-      <Filter>MySource\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>MySource\CreateObjects\Object</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
