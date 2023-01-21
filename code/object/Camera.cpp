@@ -3,6 +3,7 @@
 #include "../tool/ViewData.h"
 #include "../tool/KeyChecker.h"
 #include "../scene/GameMgr.h"
+#include "../player/Player.h"
 
 Camera::Camera() {
 
@@ -43,8 +44,7 @@ void Camera::update() {
 		moveXValue += posDistance;
 	}
 
-	//クリア時はカメラを動かせない
-	//ゲームオーバー時は見渡せるようにする
+	//クリア時もしくはゲームオーバー時にはカメラを動かせない
 	if (!Game::clearJudge()) {
 		AddPosX(moveXValue * moveValue);
 	}

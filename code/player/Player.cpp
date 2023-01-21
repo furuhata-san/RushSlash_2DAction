@@ -396,7 +396,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			Obj createObj =
 				Obj(new Effect(
 					&Loader::gameclearText,
-					(ViewData::size_w / 2) - (543.0f / 2 * 2),
+					(ViewData::gameSize_w / 2) - (543.0f / 2 * 2),
 					250.0f,
 					543.0f * 2,
 					114.0f * 2,
@@ -413,7 +413,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			createObj =
 				Obj(new Effect(
 					&Loader::pressEnterText,
-					(ViewData::size_w / 2) - (590.0f / 2),
+					(ViewData::gameSize_w / 2) - (590.0f / 2),
 					550.0f,
 					590.0f,
 					107.0f,
@@ -486,7 +486,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			Obj createObj =
 				Obj(new Effect(
 					&Loader::gameoverText,
-					(ViewData::size_w / 2) - (430 / 2 * 2),
+					(ViewData::gameSize_w / 2) - (430 / 2 * 2),
 					200.0f,
 					430.0f * 2,
 					128.0f * 2,
@@ -503,7 +503,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			createObj =
 				Obj(new Effect(
 					&Loader::pressEnterText,
-					(ViewData::size_w / 2) - (590.0f / 2),
+					(ViewData::gameSize_w / 2) - (590.0f / 2),
 					500.0f,
 					590.0f,
 					107.0f,
@@ -560,7 +560,7 @@ void Player::PlayerFallHole() {
 	if (motion == Motion::die)return;
 
 	//プレイヤのY座標がスクリーン外だった場合
-	if (this->GetPosY() > ViewData::size_h) {
+	if (this->GetPosY() > ViewData::gameSize_h) {
 		MotionChange(Motion::die, true);
 	}
 }

@@ -189,11 +189,11 @@ namespace Map {
 		//まず背景描画
 		int* backImage = &Loader::backImg[mapNum];
 		//画面サイズに合わせる
-		DrawRectExtendGraphF(0, 0, ViewData::size_w, ViewData::size_h, 0, 0, 640, 480, *backImage, true);
+		DrawRectExtendGraphF(0, 0, ViewData::gameSize_w, ViewData::gameSize_h, 0, 0, 640, 480, *backImage, true);
 
 		//スクリーンの中に描画できる量だけループ
-		for (int y = 0; y <= ViewData::size_h / blockSize; ++y) {
-			for (int x = 0; x <= ViewData::size_w / blockSize; ++x) {
+		for (int y = 0; y <= ViewData::gameSize_h / blockSize; ++y) {
+			for (int x = 0; x <= ViewData::gameSize_w / blockSize; ++x) {
 				//マップチップ検索座標スクロール対応
 				float bx_ = (float)(x + (int)(ViewData::GetRenderPosX() / blockSize));
 				float by_ = (float)y;
@@ -203,7 +203,7 @@ namespace Map {
 					//「x * 64」から　0～64の値を引いて描画<-ターゲットの座標の剰余 
 					float blockDrawPosX = (x * blockSize) - ((int)ViewData::GetRenderPosX() % blockSize);
 					//画面内の場合は描画
-					if (-blockSize <= blockDrawPosX && blockDrawPosX <= ViewData::size_w + blockSize)
+					if (-blockSize <= blockDrawPosX && blockDrawPosX <= ViewData::gameSize_w + blockSize)
 						DrawGraphF(blockDrawPosX, (float)y * blockSize, *blockImage, false);
 				}
 			}

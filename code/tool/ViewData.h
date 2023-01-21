@@ -6,9 +6,10 @@
 namespace ViewData {
 
 
-	extern int size_w;	//ウィンドウ横幅
-	extern int size_h;	//ウィンドウ縦幅
-
+	extern int gameSize_w;	//ゲーム横幅
+	extern int gameSize_h;	//ゲーム縦幅
+	extern int window_w;	//ウィンドウ横幅
+	extern int window_h;	//ウィンドウ縦幅
 
 	extern hObj playerObject;//プレイヤ保存（座標を参照するため）
 	extern float playerWorldPosX;

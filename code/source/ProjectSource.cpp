@@ -13,7 +13,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, 
 	SetOutApplicationLogValidFlag(FALSE);	//log.txtを出力しません
 
 	//ウィンドウのサイズを指定、リフレッシュレート仮処理
-	int WindowChange = SetGraphMode(ViewData::size_w, ViewData::size_h, 32, 60);
+	int WindowChange = SetGraphMode(ViewData::window_w, ViewData::window_h, 32, 60);
 	if (WindowChange == DX_CHANGESCREEN_REFRESHNORMAL) {
 		return -1;
 	}
@@ -30,8 +30,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, 
 	
 	//ロード中の文字だけを描画
 	int nowLoadingTextImg = LoadGraph("./data/textImage/NowLoading.png");
-	int loadTextPosX = ViewData::size_w - 487;
-	int loadTextPosY = ViewData::size_h - 106;
+	int loadTextPosX = ViewData::window_w - 487;
+	int loadTextPosY = ViewData::window_h - 106;
 	DrawGraph(loadTextPosX, loadTextPosY, nowLoadingTextImg, true);
 	ScreenFlip();//画面反転
 

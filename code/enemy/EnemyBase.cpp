@@ -74,7 +74,7 @@ void EnemyBase::update() {
 void EnemyBase::draw() {
 	//画面外は描画しない
 	if (GetPosX() + GetSizeW() - ViewData::GetRenderPosX() < 0) return;
-	if (GetPosX() - ViewData::GetRenderPosX() > ViewData::size_w) return;
+	if (GetPosX() - ViewData::GetRenderPosX() > ViewData::gameSize_w) return;
 	
 	//キャラを描画（この式を行うことで読み込む画像が一枚で済む）
 	DrawRectExtendGraphF
@@ -284,13 +284,13 @@ void EnemyBase::EnemyOnScreen() {
 	
 	//画面外は処理を行わない
 	if (GetPosX() + GetSizeW() - ViewData::GetRenderPosX() < 0) return;
-	if (GetPosX() - ViewData::GetRenderPosX() > ViewData::size_w) return;
+	if (GetPosX() - ViewData::GetRenderPosX() > ViewData::gameSize_w) return;
 
 	SetMoveFlag(true);
 }
 
 void EnemyBase::FallHoleRemove() {
-	if (GetPosY() > ViewData::size_h) {
+	if (GetPosY() > ViewData::gameSize_h) {
 		//エフェクト生成
 		CreateDieEffect();
 
