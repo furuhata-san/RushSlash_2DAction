@@ -98,7 +98,7 @@ void Player::draw() {
 	if (!GetIncincible_Time() || GetIncincible_Count() % 5 == 0) {
 		//キャラを描画（この式を行うことで読み込む画像が一枚で済む）
 		//スクロール対応済み
-		DrawRectGraphF(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY(),
+		DrawRectGraphF(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY() - ViewData::GetRenderPosY(),
 			this->GetPosDX(), this->GetPosDY(),
 			this->GetSizeDW(), this->GetSizeDH(),
 			*image, TRUE, mirrorFlag);
@@ -396,7 +396,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			Obj createObj =
 				Obj(new Effect(
 					&Loader::gameclearText,
-					(ViewData::size_w / 2) - (543.0f / 2 * 2),
+					(ViewData::gameSize_w / 2) - (543.0f / 2 * 2),
 					250.0f,
 					543.0f * 2,
 					114.0f * 2,
@@ -413,7 +413,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			createObj =
 				Obj(new Effect(
 					&Loader::pressEnterText,
-					(ViewData::size_w / 2) - (590.0f / 2),
+					(ViewData::gameSize_w / 2) - (590.0f / 2),
 					550.0f,
 					590.0f,
 					107.0f,
@@ -486,7 +486,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			Obj createObj =
 				Obj(new Effect(
 					&Loader::gameoverText,
-					(ViewData::size_w / 2) - (430 / 2 * 2),
+					(ViewData::gameSize_w / 2) - (430 / 2 * 2),
 					200.0f,
 					430.0f * 2,
 					128.0f * 2,
@@ -503,7 +503,7 @@ void Player::PlayMotion(Motion nowMotion) {
 			createObj =
 				Obj(new Effect(
 					&Loader::pressEnterText,
-					(ViewData::size_w / 2) - (590.0f / 2),
+					(ViewData::gameSize_w / 2) - (590.0f / 2),
 					500.0f,
 					590.0f,
 					107.0f,
@@ -560,7 +560,7 @@ void Player::PlayerFallHole() {
 	if (motion == Motion::die)return;
 
 	//プレイヤのY座標がスクリーン外だった場合
-	if (this->GetPosY() > ViewData::size_h) {
+	if (this->GetPosY() > ViewData::gameSize_h) {
 		MotionChange(Motion::die, true);
 	}
 }
@@ -638,7 +638,7 @@ void Player::DrawLifeGaugeUI() {
 
 	//基準座標
 	float dx = this->GetPosX() - ViewData::GetRenderPosX() - 25;
-	float dy = this->GetPosY() - 50;
+	float dy = this->GetPosY() - ViewData::GetRenderPosY() - 50;
 
 	//サイズ指定
 	int sizeW = 913;

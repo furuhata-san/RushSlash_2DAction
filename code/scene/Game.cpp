@@ -74,13 +74,18 @@ void GameScene::Update() {
         o->update();
 
         if (ViewData::viewTarget == o) {//ターゲットだった場合、描画座標を座標値に指定
-            ViewData::SetRenderPos(o->GetPosX() - (ViewData::size_w / 2), o->GetPosY());
+            ViewData::SetRenderPos(o->GetPosX() - (ViewData::window_w / 2), o->GetPosY());
 
-            //マップ配列に移動しないよう位置を制限
-            if (ViewData::GetRenderPosX() <= 0) ViewData::SetRenderPos(0, o->GetPosY());
-            else if (ViewData::GetRenderPosX() >= Map::width * Map::blockSize - ViewData::size_w)
-                ViewData::SetRenderPos(Map::width * Map::blockSize - ViewData::size_w, o->GetPosY());
+            //マップ配列外に移動しないよう位置を制限
+            //X補正
+            if (ViewData::GetRenderPosX() <= 0) ViewData::SetRenderPos(0, ViewData::GetRenderPosY());
+            else if (ViewData::GetRenderPosX() >= Map::width * Map::blockSize - ViewData::window_w)
+                ViewData::SetRenderPos(Map::width * Map::blockSize - ViewData::window_w, ViewData::GetRenderPosY());
 
+            //Y補正
+            if (ViewData::GetRenderPosY() <= 0) ViewData::SetRenderPos(ViewData::GetRenderPosX(), 0);
+            else if (ViewData::GetRenderPosY() >= Map::height * Map::blockSize - ViewData::window_h)
+                ViewData::SetRenderPos(ViewData::GetRenderPosX(), Map::height * Map::blockSize - ViewData::window_h);
         }
 
         });

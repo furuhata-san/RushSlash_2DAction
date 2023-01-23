@@ -88,15 +88,17 @@ void Effect::draw() {
 	if (drawFlag) {
 		//UIÇ≈ÇÕÇ»Ç¢èÍçáÇÕÉXÉNÉçÅ[ÉãëŒâû
 		float X = GetPosX();
+		float Y = GetPosY();
 		if (!UIMode) {
 			X -= ViewData::GetRenderPosX();
+			Y -= ViewData::GetRenderPosY();
 		}
 
 		DrawRectExtendGraphF(
 			X,
-			GetPosY(),
+			Y,
 			X + GetSizeW(),
-			GetPosY() + GetSizeH(),
+			Y + GetSizeH(),
 			GetPosDX(),
 			GetPosDY(),
 			GetSizeDW(),

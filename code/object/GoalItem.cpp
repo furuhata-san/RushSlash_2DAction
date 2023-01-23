@@ -44,8 +44,8 @@ void GoalItem::update() {
 void GoalItem::draw() {
 	//•`‰æˆÊ’u‚ÌÝ’è‚ðXV
 	DrawRectExtendGraphF
-	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY(),
-		this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH(),
+	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY() - ViewData::GetRenderPosY(),
+		this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH() - ViewData::GetRenderPosY(),
 		this->GetPosDX(), this->GetPosDY(),
 		this->GetSizeDW(), this->GetSizeDH(),
 		*image, true);

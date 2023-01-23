@@ -4,8 +4,10 @@
 namespace ViewData {
 
 	//ウィンドウサイズを設定
-	int size_w = 1280;
-	int size_h = 960;
+	int gameSize_w = 1280;
+	int gameSize_h = 960;
+	int window_w = 1280;
+	int window_h = 960;
 
 	//プレイヤがゲーム世界の中心の影武者的存在になる
 	//プレイヤのオブジェクト（座標を参照するため）

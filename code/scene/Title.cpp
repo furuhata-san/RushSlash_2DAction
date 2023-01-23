@@ -126,8 +126,8 @@ void Title::BackDraw(float x, float y) {
 	int srcY = 0;
 	int srcW = 1280;
 	int srcH = 960;
-	int sizeW = ViewData::size_w;
-	int sizeH = ViewData::size_h;
+	int sizeW = ViewData::gameSize_w;
+	int sizeH = ViewData::gameSize_h;
 
 	//”wŒi•`‰æ
 	DrawRectExtendGraphF(x, y, x + sizeW, y + sizeH,
