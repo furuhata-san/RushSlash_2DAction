@@ -10,7 +10,8 @@ Camera::Camera() {
 	//最初は向きなし
 	angle = non;
 
-	posDistance = 150;
+	posDistanceX = 150;
+	posDistanceY = 300;
 	moveValue = 0.05f;
 
 	SetPos(0,0);
@@ -26,6 +27,7 @@ void Camera::finalize() {
 }
 
 void Camera::update() {
+
 	//向き判断
 	if (KeyChecker::InputOn(KEY_INPUT_A) || KeyChecker::InputOn(KEY_INPUT_LEFT)) {
 		angle = Angle::left;
@@ -35,18 +37,20 @@ void Camera::update() {
 	}
 
 	//ターゲットの位置へ徐々に移動
-	//X移動のみ計算を行う(仮)
 	float moveXValue = ViewData::playerWorldPosX - GetPosX();
 	if (angle == Angle::left) {
-		moveXValue -= posDistance;
+		moveXValue -= posDistanceX;
 	}
 	else if (angle == Angle::right) {
-		moveXValue += posDistance;
+		moveXValue += posDistanceX;
 	}
 
-	//クリア時もしくはゲームオーバー時にはカメラを動かせない
+	float moveYValue = (ViewData::playerWorldPosY - posDistanceY) - GetPosY();
+
+	//クリア時もにはカメラを動かせないように
 	if (!Game::clearJudge()) {
 		AddPosX(moveXValue * moveValue);
+		AddPosY(moveYValue * moveValue);
 	}
 
 }

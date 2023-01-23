@@ -78,28 +78,28 @@ void EnemyBase::draw() {
 	
 	//キャラを描画（この式を行うことで読み込む画像が一枚で済む）
 	DrawRectExtendGraphF
-	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY(),
-		 this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH(),
+	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY() - ViewData::GetRenderPosY(),
+		 this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH() - ViewData::GetRenderPosY(),
 			this->GetPosDX(), this->GetPosDY(),
 			this->GetSizeDW(), this->GetSizeDH(),
 		*image, true);
 
-	//タイトルバーの描画
+	//HPバーの描画
 	if (life != lifeMax) {//体力が最大値ではない場合
 		//黒ボックス
 		DrawBox(
 			int(this->GetPosX() - ViewData::GetRenderPosX()),
-			int(this->GetPosY() - 15),
+			int(this->GetPosY() - 15 - ViewData::GetRenderPosY()),
 			int(this->GetPosX() - ViewData::GetRenderPosX() + this->GetSizeW()),
-			int(this->GetPosY() - 5),
+			int(this->GetPosY() - 5 - ViewData::GetRenderPosY()),
 			GetColor(0, 0, 0), true);
 
 		//緑ボックス
 		int greenBoxDrawPos = (this->GetSizeW() / lifeMax) * life;
 		DrawBox(int(this->GetPosX() - ViewData::GetRenderPosX()),
-			int(this->GetPosY() - 15),
+			int(this->GetPosY() - 15 - ViewData::GetRenderPosY()),
 			int(this->GetPosX() - ViewData::GetRenderPosX() + greenBoxDrawPos),
-			int(this->GetPosY() - 5),
+			int(this->GetPosY() - 5 - ViewData::GetRenderPosY()),
 			GetColor(0, 255, 0), true);
 	}
 }

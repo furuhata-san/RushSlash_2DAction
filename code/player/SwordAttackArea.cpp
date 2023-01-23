@@ -68,8 +68,8 @@ void SwordAttackArea::draw() {
 
 	//エフェクトをを描画（この式を行うことで読み込む画像が一枚で済む）
 	DrawRectExtendGraphF
-	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY(),
-		this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH(),
+	(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY() - ViewData::GetRenderPosY(),
+		this->GetPosX() + this->GetSizeW() - ViewData::GetRenderPosX(), this->GetPosY() + this->GetSizeH() - ViewData::GetRenderPosY(),
 		this->GetPosDX(), this->GetPosDY(),
 		this->GetSizeDW(), this->GetSizeDH(),
 		*image, true);

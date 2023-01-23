@@ -196,15 +196,16 @@ namespace Map {
 			for (int x = 0; x <= ViewData::gameSize_w / blockSize; ++x) {
 				//マップチップ検索座標スクロール対応
 				float bx_ = (float)(x + (int)(ViewData::GetRenderPosX() / blockSize));
-				float by_ = (float)y;
+				float by_ = (float)(y + (int)(ViewData::GetRenderPosY() / blockSize));
 
 				if (GetMapChip((int)by_, (int)bx_) == 1) {//チップ検索
 					//描画X座標をスクロール対応させてからマップ描画
 					//「x * 64」から　0～64の値を引いて描画<-ターゲットの座標の剰余 
 					float blockDrawPosX = (x * blockSize) - ((int)ViewData::GetRenderPosX() % blockSize);
+					float blockDrawPosY = (y * blockSize) - ((int)ViewData::GetRenderPosY() % blockSize);
 					//画面内の場合は描画
 					if (-blockSize <= blockDrawPosX && blockDrawPosX <= ViewData::gameSize_w + blockSize)
-						DrawGraphF(blockDrawPosX, (float)y * blockSize, *blockImage, false);
+						DrawGraphF(blockDrawPosX, blockDrawPosY, *blockImage, false);
 				}
 			}
 		}

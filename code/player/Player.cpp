@@ -98,7 +98,7 @@ void Player::draw() {
 	if (!GetIncincible_Time() || GetIncincible_Count() % 5 == 0) {
 		//キャラを描画（この式を行うことで読み込む画像が一枚で済む）
 		//スクロール対応済み
-		DrawRectGraphF(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY(),
+		DrawRectGraphF(this->GetPosX() - ViewData::GetRenderPosX(), this->GetPosY() - ViewData::GetRenderPosY(),
 			this->GetPosDX(), this->GetPosDY(),
 			this->GetSizeDW(), this->GetSizeDH(),
 			*image, TRUE, mirrorFlag);
@@ -638,7 +638,7 @@ void Player::DrawLifeGaugeUI() {
 
 	//基準座標
 	float dx = this->GetPosX() - ViewData::GetRenderPosX() - 25;
-	float dy = this->GetPosY() - 50;
+	float dy = this->GetPosY() - ViewData::GetRenderPosY() - 50;
 
 	//サイズ指定
 	int sizeW = 913;

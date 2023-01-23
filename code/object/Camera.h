@@ -18,7 +18,8 @@ public:
 	Angle angle;
 
 	//À•W
-	float posDistance;
+	float posDistanceX;
+	float posDistanceY;
 	float moveValue;
 
 	virtual void finalize();//I—¹E‰ğ•úˆ—
